@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine WG</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+
+<div class="topnav" id="myTopnav">
+    <a href="/index.html" class="active">Home</a>
+    <a class="username">Hallo <span id="username"></span></a>
+    <a class="split" onclick="logout()">Logout</a>
+    <a href="/artists.html" class="spliticon"><img class="pp" src="/Media/Icons/profile.png"> Dein Profil</a>
+    <a href="javascript:void(0);" class="icon" onclick="responsiveTopnav()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<!-- --------------------------------------------------------------------------------------- -->
+
+<body>
+    <div id="content">
+        <div class="liste-Beitraege">
+            <h2>Dein Profil</h2>
+
+            <label for="profilbild">Profilbild URL</label> <br>
+            <Input id="profilbild" type="text" value=""> <br>
+
+            <label for="name">Name</label> <br>
+            <input id="name" type="text"> <br>
+
+            <label for="email">E-Mail</label> <br>
+            <input id="email" type="text"> <br>
+
+            <!--
+        <label for="bild">Bild URL</label> <br>
+        <input id="bild" type="text" value=""> <br>
+        <img id="bild-vorschau" width="300px" src="" alt=""> <br>
+       -->
+
+            <label for="beschreibung">Beschreibung</label> <br>
+            <textarea id="beschreibung" name="beschreibung"> </textarea> <br>
+
+            <Label for="links">Link</Label> <br>
+            <input id="links" type="url"> <br>
+
+
+            <label for="kanton">Kanton</label> <br>
+            <select class="dropdown" name="kanton" id="kanton">
+                <option>Graubünden</option>
+                <option>Bern</option>
+                <option>Zürich</option>
+                <option>Thurgau</option>
+                <option>St.Gallen</option>
+                <option>Genf</option>
+                <option>Freiburg</option>
+                <option>Basel-Land</option>
+                <option>Basel-Stadt</option>
+                <option>Uri</option>
+                <option>Glarus</option>
+                <option>Schaffhausen</option>
+                <option>Solothurn</option>
+                <option>Schwyz</option>
+                <option>Jura</option>
+                <option>Aargau</option>
+                <option>Neuenburg</option>
+                <option>Wallis</option>
+                <option>Nidwalden</option>
+                <option>Obwalden</option>
+                <option>Appenzell-Innerrhoden</option>
+                <option>Appenzell-Ausserrhoden</option>
+                <option>Waadt</option>
+                <option>Tessin</option>
+                <option>Luzern</option>
+                <option>Zug</option>
+            </select>
+
+            <br>
+
+            <p>Status</p>
+            <input type="radio" id="oeffentlich" name="status" value="1">
+            <label for="oeffentlich">Öffentlich</label>
+
+            <input type="radio" id="privat" name="status" value="0">
+            <label for="privat">Privat</label>
+
+            <br><br>
+
+            <button class="hidden" id="button-neue" onclick="neuesProfil()">Veröffentlichen</button>
+            <button class="hidden" id="button-aktualisieren" onclick="aktualisiereProfil()">Aktualisieren</button>
+            <button class="hidden" id="button-loeschen" onclick="loescheProfil()">Löschen</button>
+
+            <p id="nachricht"> </p>
+        </div>
+    </div>
+
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/script.js"></script>
+    <script src="js/artists.js"></script>
+
+
+</body>
+
+</html>
